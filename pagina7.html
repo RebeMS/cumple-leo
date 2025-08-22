@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Gran Quiz Final 💘</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("fondo.png") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+
+    .quiz-container {
+      background-color: rgba(0,0,0,0.7);
+      padding: 20px;
+      border-radius: 15px;
+      display: inline-block;
+      margin-top: 50px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ffcc66;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-top: 20px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    button:hover {
+      background-color: #ffdd88;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #ffccff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>El Gran Quiz Final 💘</h1>
+
+  <div class="quiz-container">
+    <form id="quizForm">
+      <p>1. ¿Cómo se llama nuestra mascota favorita? 🐾</p>
+      <input type="radio" name="q1" value="Nala"> Nala y Atreus<br>
+      <input type="radio" name="q1" value="Luna"> Luna y Polenta<br>
+      <input type="radio" name="q1" value="Sol"> Sol y Limón <br><br>
+
+      <p>2. ¿Cuál fue nuestro primer jueguito en este regalo? 🎮</p>
+      <input type="radio" name="q2" value="Corazon"> Encuentra el corazón <br>
+      <input type="radio" name="q2" value="Mini quiz"> Mini quiz <br>
+      <input type="radio" name="q2" value="Fotos"> Galería de fotos <br><br>
+
+      <p>3. ¿Qué significa este regalo para mí? 💝</p>
+      <input type="radio" name="q3" value="Tarea"> Una tarea <br>
+      <input type="radio" name="q3" value="Juego"> Un juego <br>
+      <input type="radio" name="q3" value="Amor"> Una forma de decirte cuánto te amo <br><br>
+
+      <button type="button" onclick="verificarRespuestas()">Enviar Respuestas</button>
+    </form>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function verificarRespuestas() {
+      let form = document.forms["quizForm"];
+      let r1 = form["q1"].value;
+      let r2 = form["q2"].value;
+      let r3 = form["q3"].value;
+      
+      if (r1 === "Nala" && r2 === "Corazon" && r3 === "Amor") {
+        document.getElementById("resultado").innerHTML = 
+          "🎉 ¡Correcto amor! Has llegado al final del regalo 💖";
+        setTimeout(() => {
+          window.location.href = "final.html"; // Última página de cierre
+        }, 3000);
+      } else {
+        document.getElementById("resultado").innerHTML = 
+          "❌ Algunas respuestas no son correctas, intenta otra vez 💕";
+      }
+    }
+  </script>
+
+</body>
+</html>

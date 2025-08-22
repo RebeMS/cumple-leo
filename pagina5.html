@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestra Historia - Página 5</title>
+  <style>
+    body {
+      background: url('fondo.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .quiz-box {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+      max-width: 700px;
+    }
+    button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #ff9ed1;
+      color: white;
+    }
+    button:hover {
+      background-color: #ff6ea8;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .next-btn {
+      margin-top: 40px;
+      padding: 15px 40px;
+      font-size: 20px;
+      border-radius: 10px;
+      background-color: #ffd27f;
+      color: black;
+      border: none;
+      cursor: pointer;
+    }
+    .next-btn:hover {
+      background-color: #ffbf4d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mini Quiz 💕</h1>
+
+  <div class="quiz-box">
+    <h2>¿Quién se duerme más rápido? 😴</h2>
+    <button onclick="mostrar('¡Obvio vos, siempre primero! 😂')">Leo</button>
+    <button onclick="mostrar('¡Hahaha no seas mentiroso amor! 💖')">Rebe</button>
+
+    <h2>¿Quién es más tryhard en los juegos? 🎮</h2>
+    <button onclick="mostrar('¡Vos, tryhard! 💪 Mi tilteado lindo')">Leo</button>
+    <button onclick="mostrar('Yo también cuando quiero... 👀✨')">Rebe</button>
+
+    <h2>¿Quién da los mejores abrazos? 🤗</h2>
+    <button onclick="mostrar('¡Si abrazando al osito, yo! 🥰')">Rebe</button>
+    <button onclick="mostrar('¡Él, con esos abrazos de osito tierno! 🐻')">Leo</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <!-- Botón Next -->
+  <div style="text-align:center;">
+    <button class="next-btn" onclick="location.href='pagina6.html'">Next →</button>
+  </div>
+
+  <script>
+    function mostrar(texto) {
+      document.getElementById("resultado").innerText = texto;
+    }
+  </script>
+</body>
+</html>
+

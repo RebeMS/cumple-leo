@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestra Historia - Página 2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: url('fondo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+    }
+    .page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .avatars {
+      display: flex;
+      gap: 50px;
+      margin-bottom: 30px;
+    }
+    .avatars img {
+      width: 120px;
+      height: 120px;
+      image-rendering: pixelated;
+    }
+    .text-box {
+      background: rgba(255, 111, 165, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      font-size: 18px;
+    }
+    .next-btn {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 20px;
+      border-radius: 10px;
+      background-color: #6fa8ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .next-btn:hover {
+      background-color: #4a90e2;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="avatars">
+      <img src="avatar1.png" alt="Ella">
+      <img src="avatar2.png" alt="Él">
+    </div>
+    <div class="text-box">
+      Entre risas, pelis, juegos en <b>Discord</b>, <b>GTA Roleplay</b>, <b>TFT</b>, 
+      <b>Fortnite</b>, <b>Hormiguitas</b> y hasta en <b>Phasmophobia</b>, fue creciendo nuestra conexión.  
+      Aunque la distancia era grande, cada día nos sentíamos más cerca. Te quería más cerca.
+    </div>
+    <button class="next-btn" onclick="location.href='pagina3.html'">Next →</button>
+  </div>
+</body>
+</html>
