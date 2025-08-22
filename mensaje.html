@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Final</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffe6f0, #fff);
+      font-family: 'Courier New', monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #ff4d6d;
+      text-align: center;
+      font-size: 28px;
+    }
+    #mensaje {
+      border-right: 3px solid #ff4d6d;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: escribir 6s steps(50) 1s forwards, parpadeo 0.75s step-end infinite;
+    }
+    @keyframes escribir {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes parpadeo {
+      50% { border-color: transparent }
+    }
+  </style>
+</head>
+<body>
+  <div id="mensaje">Feliz cumpleaños mi amor... Te amo con todo mi corazón 💖</div>
+</body>
+</html>
